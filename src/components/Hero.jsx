@@ -16,12 +16,15 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-24">
-      {/* Background gradient */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(99,102,241,0.25),transparent_40%),radial-gradient(ellipse_at_bottom_right,rgba(236,72,153,0.25),transparent_40%)]" />
+      {/* Background gradient overlay - does not block interaction */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(59,130,246,0.16),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(147,51,234,0.16),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.06),transparent_60%)] dark:bg-[linear-gradient(to_top,rgba(0,0,0,0.25),transparent_60%)]" />
+      </div>
 
-      {/* Spline canvas */}
+      {/* Spline full-bleed cover */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/6YdU5lHppZArYrus/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       {/* Content overlay */}
@@ -42,7 +45,7 @@ export default function Hero() {
             transition={{ delay: 0.1, duration: 0.7 }}
             className="mt-4 text-lg text-neutral-600 dark:text-neutral-300 sm:text-xl"
           >
-            I build delightful, performant digital experiences.
+            I craft modern, animated web experiences with a focus on performance and polish.
           </motion.p>
 
           <div className="mt-6 flex items-center justify-center gap-3">

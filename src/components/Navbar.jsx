@@ -53,12 +53,12 @@ export default function Navbar() {
   );
 
   const downloadResume = () => {
-    const content = `Resume\nName: Your Name\nRole: Developer / Designer / Creator\nSummary: Passionate about building delightful digital products.`;
+    const content = `Name: Shivraj Dhotre\nRole: Full Stack Developer\n\nSummary:\nMotivated and growth-focused Full Stack Developer skilled in React.js, TypeScript, Node.js, MongoDB, and Tailwind CSS. Experienced in building scalable and efficient real-world applications with clean UI, RESTful APIs, and WebRTC integrations. Passionate about high-performance web apps, real-time features, and smooth animations.\n\nTechnical Skills\nFrontend: React.js, TypeScript, JavaScript (ES6+), Tailwind CSS, CSS3/SCSS, Redux, Framer Motion\nBackend: Node.js, Express.js, MongoDB, Socket.IO\nTools & DevOps: Git, GitHub, Postman, Vercel, Microsoft Azure\nOther: RESTful APIs, JWT Authentication, Cloudinary, MongoDB GridFS\n\nExperience\nJunior Software Developer (Feb 2025 – Present)\n- Built a complete video calling feature using WebRTC for real-time NGO–Donor communication.\n- Designed Socket.IO signaling logic and RESTful APIs using Node.js and Express.\n- Created admin APIs to manage donation data and real-time analytics.\n- Developed React-based frontend for seamless campaign donations.\n- Focused on real-time updates, scalability, and version control using Git and GitHub.\n\nProjects\n1) YouTube Clone (Full Stack App)\nLink: https://youtube-frontend-dle2.vercel.app/\nTech: React, Node.js, Express, MongoDB\n- Implemented video metadata management (titles, tags, thumbnails).\n- Integrated JWT authentication for user security.\n- Used Cloudinary for optimized file storage and delivery.\n\n2) Admin Panel for Media Management\nTech: React, Node.js, Express, MongoDB\n- Developed a full admin dashboard to monitor platform activity.\n- Added secure JWT-based authentication and role-based access.\n- Used MongoDB GridFS for large media storage and retrieval.\n\nEducation\nB.Tech, VVP, DBATU University — CGPA: 8`;
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'resume.txt';
+    a.download = 'Shivraj-Dhotre-Resume.txt';
     document.body.appendChild(a);
     a.click();
     URL.revokeObjectURL(url);
@@ -77,7 +77,7 @@ export default function Navbar() {
             onClick={() => handleJump('home')}
             className="font-semibold tracking-tight text-neutral-800 transition-colors hover:text-indigo-600 dark:text-neutral-100 dark:hover:text-indigo-400"
           >
-            <span className="text-lg">MyPortfolio</span>
+            <span className="text-lg">Shivraj Dhotre</span>
           </button>
 
           <div className="hidden items-center gap-6 md:flex">

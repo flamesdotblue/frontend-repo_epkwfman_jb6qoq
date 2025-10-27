@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 
-const roles = ['Developer', 'Designer', 'Creator'];
+const roles = ['Full Stack Developer', 'Designer', 'Creator'];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -26,7 +26,7 @@ export default function Hero() {
 
       {/* Spline full-bleed cover */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/oRrPvYYzPQFRFKuU/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/qQUip0dJPqrrPryE/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       {/* Content overlay */}
@@ -38,7 +38,7 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
             className="bg-gradient-to-br from-neutral-900 to-neutral-700 bg-clip-text text-4xl font-extrabold leading-tight text-transparent dark:from-white dark:to-neutral-300 sm:text-6xl"
           >
-            Hi, I’m <span className="text-indigo-600 dark:text-indigo-400">Your Name</span>
+            Hi, I’m <span className="text-indigo-600 dark:text-indigo-400">Shivraj Dhotre</span>
           </motion.h1>
 
           <motion.p
@@ -47,7 +47,7 @@ export default function Hero() {
             transition={{ delay: 0.1, duration: 0.7 }}
             className="mt-4 text-lg text-neutral-600 dark:text-neutral-300 sm:text-xl"
           >
-            I craft modern, animated web experiences with a focus on performance and polish.
+            Motivated and growth-focused Full Stack Developer skilled in React, TypeScript, Node.js, MongoDB, and Tailwind CSS. Passionate about high-performance web apps, real-time features, and smooth animations.
           </motion.p>
 
           <div className="mt-6 flex items-center justify-center gap-3">

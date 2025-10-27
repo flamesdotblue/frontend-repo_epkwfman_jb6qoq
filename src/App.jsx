@@ -13,7 +13,7 @@ function App() {
         <Contact />
       </main>
       <footer className="border-t border-neutral-200 py-8 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
-        © {new Date().getFullYear()} Your Name. All rights reserved.
+        © {new Date().getFullYear()} Shivraj Dhotre. All rights reserved.
       </footer>
     </div>
   );

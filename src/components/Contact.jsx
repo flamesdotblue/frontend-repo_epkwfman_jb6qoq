@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Twitter } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -23,7 +23,8 @@ export default function Contact() {
             const msg = fd.get('message');
             const email = fd.get('email');
             const body = encodeURIComponent(`Hi, I am ${name}.\n\n${msg}\n\nReach me at: ${email}`);
-            window.location.href = `mailto:your@email.com?subject=Portfolio%20Inquiry&body=${body}`;
+            // Open default email client without pre-filled recipient
+            window.location.href = `mailto:?subject=Portfolio%20Inquiry&body=${body}`;
           }}
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,24 +59,17 @@ export default function Contact() {
           className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
         >
           <p className="text-neutral-600 dark:text-neutral-300">
-            I’m currently open to new opportunities and collaborations. Feel free to reach out via the form or connect on
-            social media.
+            I’m currently open to new opportunities and collaborations. Use the form to start a conversation, and I’ll get back to you.
           </p>
           <div className="mt-6 grid gap-3">
-            <a href="mailto:your@email.com" className="inline-flex items-center gap-2 text-neutral-800 transition hover:text-indigo-600 dark:text-neutral-100">
-              <Mail size={18} /> your@email.com
-            </a>
-            <a href="#" className="inline-flex items-center gap-2 text-neutral-800 transition hover:text-indigo-600 dark:text-neutral-100">
-              <Linkedin size={18} /> LinkedIn
-            </a>
-            <a href="#" className="inline-flex items-center gap-2 text-neutral-800 transition hover:text-indigo-600 dark:text-neutral-100">
-              <Twitter size={18} /> @yourhandle
-            </a>
+            <span className="inline-flex items-center gap-2 text-neutral-800 dark:text-neutral-100">
+              <Mail size={18} /> Email available upon request
+            </span>
           </div>
         </motion.div>
       </div>
 
-      <div className="pointer-events-none absolute -z-[0] inset-x-0 bottom-0 h-40 bg-gradient-to-t from-indigo-500/10 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-indigo-500/10 to-transparent" />
     </section>
   );
 }

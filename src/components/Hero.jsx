@@ -26,7 +26,7 @@ export default function Hero() {
 
       {/* Spline full-bleed cover */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/qQUip0dJPqrrPryE/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       {/* Content overlay */}
